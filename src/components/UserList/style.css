@@ -1,0 +1,24 @@
+.table.main-table {
+    width: calc(100% - 500px);
+    text-align: center;
+    cursor: pointer;
+    float: left;
+}
+
+.table.main-table tr td {
+    vertical-align: middle;
+}
+
+.table.main-table tr td:nth-child(1) {
+    width: 100px;
+}
+
+td.user-name {
+    font-size: 21px;
+    font-weight: 500;
+}
+
+td > img {
+    width: 80px;
+    height: 80px;
+}

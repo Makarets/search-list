@@ -1,0 +1,40 @@
+.user-card-block {
+    width: 450px;
+    position: fixed;
+    top: 50px;
+    right: 25px;
+}
+
+.user-card-block tr > td {
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #dee2e6;
+    font-size: 20px;
+    padding: 10px 0px;
+}
+
+.user-card-block td > img {
+    display: block;
+    margin: 0 auto;
+    width: 350px;
+    height: auto;
+}
+.user-card-block td > div span {
+     font-weight: 700;
+}
+
+.user-card-block tr > td.card-name {
+    font-size: 32px;
+    font-weight: 500;
+    border-top: none;
+}
+
+.user-card-block tr > td.card-avatar {
+    border-bottom: none;
+}
+
+.user-card-block tr > td.card-phrase div {
+    text-align: left;
+    font-size: 17px;
+    margin: 0px 25px;
+}
