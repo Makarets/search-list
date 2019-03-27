@@ -1,39 +1,42 @@
 import React from 'react';
 import './style.css';
 
-const UserCard = (props) => (
+const UserCard = (props) => {
 
-    <table className='user-card-block'>
-        <tbody>
-        <tr>
-            <td colSpan='2' className='card-avatar'>
-                <img src={'images/' + props.avatar + '.svg'} alt={props.name}/>
-            </td>
-        </tr>
-        <tr>
-            <td colSpan='2' className='card-name'>{props.name}</td>
-        </tr>
-        <tr>
-            <td>Age</td>
-            <td>{props.age}</td>
-        </tr>
-        <tr>
-            <td>Animal</td>
-            <td>{props.avatar}</td>
-        </tr>
-        <tr>
-            <td>Phone</td>
-            <td>{props.phone}</td>
-        </tr>
-        <tr>
-            <td colSpan='2' className='card-phrase'>
-                <div>
-                    <span>Crown phrase: </span>{props.phrase}
-                </div>
-            </td>
-        </tr>
-        </tbody>
-    </table>
-);
+    const user = props.data[props.active];
+    return(
+        <table className='user-card-block'>
+            <tbody>
+            <tr>
+                <td colSpan='2' className='card-avatar'>
+                    <img src={'images/' + user.image + '.svg'} alt={user.name}/>
+                </td>
+            </tr>
+            <tr>
+                <td colSpan='2' className='card-name'>{user.name}</td>
+            </tr>
+            <tr>
+                <td>Age</td>
+                <td>{user.age}</td>
+            </tr>
+            <tr>
+                <td>Animal</td>
+                <td>{user.image}</td>
+            </tr>
+            <tr>
+                <td>Phone</td>
+                <td>{user.phone}</td>
+            </tr>
+            <tr>
+                <td colSpan='2' className='card-phrase'>
+                    <div>
+                        <span>Crown phrase: </span>{user.phrase}
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    )
+};
 
 export default UserCard;

@@ -3,30 +3,30 @@ import './style.css';
 
 const UserList = (props) => {
 
-	function checkactiveCard() {
- 		props.activeCard({
-			age: props.age,
-			name: props.name,
-			phone: props.phone,
-			avatar: props.avatar,
-			phrase: props.phrase,
-		});
- 	};
+	// function checkactiveCard() {
+ // 		props.activeCard({
+	// 		age: props.age,
+	// 		name: props.name,
+	// 		phone: props.phone,
+	// 		avatar: props.avatar,
+	// 		phrase: props.phrase,
+	// 	});
+ // 	};
 
-	function onload() {
-		if(props.index == 0) {
-			props.activeCard({
-				age: props.age,
-				name: props.name,
-				phone: props.phone,
-				avatar: props.avatar,
-				phrase: props.phrase,
-			});
-		}
-	};
+	// function onload() {
+	// 	if(props.index == 0) {
+	// 		props.activeCard({
+	// 			age: props.age,
+	// 			name: props.name,
+	// 			phone: props.phone,
+	// 			avatar: props.avatar,
+	// 			phrase: props.phrase,
+	// 		});
+	// 	}
+	// };
 
 	return(
-		<tr onClick={checkactiveCard} onLoad={onload}>
+		<tr onClick={() => props.activeCard({ active: props.index })} >
 			<td>
 				<img src={'images/' + props.avatar + '.svg'} alt={props.name}/>
 			</td>

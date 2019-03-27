@@ -9,20 +9,12 @@ class ReactChallenge extends React.Component {
 		super(props);
 
 		this.state = {
-			infoCard: {
-				age: '',
-				name: '',
-				phone: '',
-				avatar: '',
-				phrase: '',
-			},
+			active: 0,
 		}
 	}
 
-	activeCard = (elem) => {
-		this.setState({
-			infoCard: elem
-		})
+	activeCard = (config) => {
+		this.setState(config)
 	};
 
 
@@ -48,13 +40,7 @@ class ReactChallenge extends React.Component {
 						{users}
 					</tbody>
 				</Table>
-				<UserCard
-					age={infoCard.age}
-					name={infoCard.name}
-					phone={infoCard.phone}
-					avatar={infoCard.avatar}
-					phrase={infoCard.phrase}
-				/>
+				<UserCard active={this.state.active} data={UserData}/>
             </div>
 		);
 	}
