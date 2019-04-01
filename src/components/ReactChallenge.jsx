@@ -3,44 +3,53 @@ import UserData from '../data.json';
 import Table from 'react-bootstrap/Table';
 import UserList from './UserList/UserList';
 import UserCard from './UserCard/UserCard';
+import Search from './Search/Search';
 
 class ReactChallenge extends React.Component {
 	constructor(props) {
 		super(props);
 
+        this.initialData = UserData;
+
 		this.state = {
+			data: this.initialData,
 			active: 0,
 		}
+
 	}
 
-	activeCard = (config) => {
+	update = (config) => {
 		this.setState(config)
 	};
 
-
 	render() {
-		const infoCard = this.state.infoCard;
+		const state = this.state;
 
-		const users = UserData.map((element, index) => {
+		const users = state.data.map((user, index) => {
 			return (<UserList
+				user={user}
 				index={index}
-				id={element.id}
-				age={element.age}
-				name={element.name}
-				phone={element.phone}
-				avatar={element.image}
-				phrase={element.phrase}
-				activeCard={this.activeCard}
+				update={this.update}
 			/>);
 		});
+
+     	if(!state.data[state.active]) {
+     		return (
+     			<div>
+     				<Search update={this.update} data={this.initialData} />
+     				<h1>Nothing found :(</h1>
+     			</div>
+     		);
+     	}
 		return(
 		    <div>
+		    	<Search update={this.update} data={this.initialData} />
 				<Table striped bordered hover className='main-table'>
 					<tbody>
 						{users}
 					</tbody>
 				</Table>
-				<UserCard active={this.state.active} data={UserData}/>
+				<UserCard active={state.active} data={state.data}/>
             </div>
 		);
 	}

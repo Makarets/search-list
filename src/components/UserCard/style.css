@@ -1,7 +1,6 @@
 .user-card-block {
     width: 450px;
     position: fixed;
-    top: 50px;
     right: 25px;
 }
 
@@ -9,7 +8,7 @@
     text-align: center;
     vertical-align: middle;
     border: 1px solid #dee2e6;
-    font-size: 20px;
+    font-size: 1.5em;
     padding: 10px 0px;
 }
 
@@ -24,7 +23,7 @@
 }
 
 .user-card-block tr > td.card-name {
-    font-size: 32px;
+    font-size: 2em;
     font-weight: 500;
     border-top: none;
 }
@@ -37,4 +36,13 @@
     text-align: left;
     font-size: 17px;
     margin: 0px 25px;
+}
+
+@media (max-width: 1366px) {
+    .user-card-block td > img {
+        width: 250px;
+    }
+    .user-card-block tr > td {
+        font-size: 1.2em;
+    }
 }

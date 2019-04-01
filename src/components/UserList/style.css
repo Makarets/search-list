@@ -22,3 +22,9 @@ td > img {
     width: 80px;
     height: 80px;
 }
+
+@media (max-width: 1366px) {
+    td.user-phrase {
+        max-width: 300px;
+    }
+}

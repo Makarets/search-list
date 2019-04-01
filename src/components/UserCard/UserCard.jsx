@@ -1,9 +1,11 @@
 import React from 'react';
 import './style.css';
 
-const UserCard = (props) => {
+export default ({data, active}) => {
 
-    const user = props.data[props.active];
+    if(!data || !data[active]) {return ''}
+
+    const user = data[active];
     return(
         <table className='user-card-block'>
             <tbody>
@@ -38,5 +40,3 @@ const UserCard = (props) => {
         </table>
     )
 };
-
-export default UserCard;

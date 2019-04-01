@@ -1,41 +1,16 @@
 import React from 'react';
 import './style.css';
 
-const UserList = (props) => {
-
-	// function checkactiveCard() {
- // 		props.activeCard({
-	// 		age: props.age,
-	// 		name: props.name,
-	// 		phone: props.phone,
-	// 		avatar: props.avatar,
-	// 		phrase: props.phrase,
-	// 	});
- // 	};
-
-	// function onload() {
-	// 	if(props.index == 0) {
-	// 		props.activeCard({
-	// 			age: props.age,
-	// 			name: props.name,
-	// 			phone: props.phone,
-	// 			avatar: props.avatar,
-	// 			phrase: props.phrase,
-	// 		});
-	// 	}
-	// };
-
+export default ({index, user, update}) => {
 	return(
-		<tr onClick={() => props.activeCard({ active: props.index })} >
+		<tr onClick={() => update({ active: index })} >
 			<td>
-				<img src={'images/' + props.avatar + '.svg'} alt={props.name}/>
+				<img src={'images/' + user.image + '.svg'} alt={user.name}/>
 			</td>
-			<td className='user-name'>{props.name}</td>
-			<td className='user-age'>{props.age}</td>
-			<td className='user-phone'>{props.phone}</td>
-			<td className='user-phrase'>{props.phrase}</td>
+			<td className='user-name'>{user.name}</td>
+			<td className='user-age'>{user.age}</td>
+			<td className='user-phone'>{user.phone}</td>
+			<td className='user-phrase'>{user.phrase}</td>
 		</tr>
 	)
 };
-
-export default UserList;
