@@ -1,0 +1,42 @@
+header#main-header {
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+    background-color: rgb(40, 44, 52);
+    margin-bottom: 60px;
+}
+
+header div {
+    margin: auto 0;
+}
+
+header > img {
+    display: block;
+    width: 250px;
+    -webkit-animation: rotation 10s infinite linear;
+}
+
+header h1 {
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    color: rgb(97, 218, 251);
+}
+
+header h2 {
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 0px;
+}
+
+@-webkit-keyframes rotation {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(359deg);
+    }
+}
+
+
+

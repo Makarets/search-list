@@ -16,9 +16,12 @@ export default ({data, update}) => {
 	};
 
 	return (
-		<input  
-			type='text' 
-			onChange={dataSearch}
-		/>
+		<div className='search-block'>
+			<i className='search-icon'></i>
+			<input
+				type='text'
+				onChange={dataSearch}
+			/>
+		</div>
 	)
 };

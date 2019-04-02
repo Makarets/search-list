@@ -1,12 +1,22 @@
+.main-table-block {
+    width: 900px;
+    margin-left: 15%;
+}
+
 .table.main-table {
-    width: calc(100% - 500px);
+    width: 100%;
     text-align: center;
     cursor: pointer;
-    float: left;
 }
+.wrapper {
+    display: flex;
+    position: relative;
+}
+
 
 .table.main-table tr td {
     vertical-align: middle;
+    border: 1px solid #fff;
 }
 
 .table.main-table tr td:nth-child(1) {
@@ -19,12 +29,11 @@ td.user-name {
 }
 
 td > img {
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
 }
 
-@media (max-width: 1366px) {
-    td.user-phrase {
-        max-width: 300px;
-    }
+td.user-phrase {
+    max-width: 350px;
+    text-align: left;
 }

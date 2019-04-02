@@ -4,6 +4,7 @@ import Table from 'react-bootstrap/Table';
 import UserList from './UserList/UserList';
 import UserCard from './UserCard/UserCard';
 import Search from './Search/Search';
+import './main.css';
 
 class ReactChallenge extends React.Component {
 	constructor(props) {
@@ -14,9 +15,30 @@ class ReactChallenge extends React.Component {
 		this.state = {
 			data: this.initialData,
 			active: 0,
+            scrollHandler: 'card',
 		}
 
 	}
+
+    componentDidMount() {
+        window.addEventListener('scroll', this.handleScroll);
+    };
+
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this.handleScroll);
+    };
+
+    handleScroll = (event) => {
+        if (window.pageYOffset > 200) {
+            this.setState({
+                scrollHandler: 'card-top'
+            })
+        }else {
+            this.setState({
+                scrollHandler: 'card'
+            })
+        }
+    };
 
 	update = (config) => {
 		this.setState(config)
@@ -35,21 +57,26 @@ class ReactChallenge extends React.Component {
 
      	if(!state.data[state.active]) {
      		return (
-     			<div>
-     				<Search update={this.update} data={this.initialData} />
-     				<h1>Nothing found :(</h1>
-     			</div>
+                <div className='wrapper'>
+                    <div className='main-table-block'>
+                        <Search update={this.update} data={this.initialData} />
+                        <h1 className='not-found'>Nothing found :(</h1>
+                    </div>
+                    <UserCard active={state.active} data={state.data} id={state.scrollHandler}/>
+                </div>
      		);
      	}
 		return(
-		    <div>
-		    	<Search update={this.update} data={this.initialData} />
-				<Table striped bordered hover className='main-table'>
-					<tbody>
-						{users}
-					</tbody>
-				</Table>
-				<UserCard active={state.active} data={state.data}/>
+		    <div className='wrapper'>
+                <div className='main-table-block'>
+                    <Search update={this.update} data={this.initialData} />
+                    <Table striped bordered hover className='main-table'>
+                        <tbody>
+                        {users}
+                        </tbody>
+                    </Table>
+                </div>
+				<UserCard active={state.active} data={state.data} id={state.scrollHandler}/>
             </div>
 		);
 	}

@@ -1,0 +1,9 @@
+h1.not-found {
+    font-size: 52px;
+    text-align: center;
+}
+h1.not-found::before {
+    content: url("/not-found.jpg");
+    display: block;
+    margin-top: 40px;
+}

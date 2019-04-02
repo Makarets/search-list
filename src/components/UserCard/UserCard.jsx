@@ -1,13 +1,13 @@
 import React from 'react';
 import './style.css';
 
-export default ({data, active}) => {
+export default ({data, active, id}) => {
 
     if(!data || !data[active]) {return ''}
 
     const user = data[active];
     return(
-        <table className='user-card-block'>
+        <table className='user-card-block' id={id}>
             <tbody>
             <tr>
                 <td colSpan='2' className='card-avatar'>

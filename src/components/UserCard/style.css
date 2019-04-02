@@ -1,21 +1,28 @@
 .user-card-block {
-    width: 450px;
+    width: 380px;
     position: fixed;
-    right: 25px;
+    right: 15%;
+    top: 270px;
+    transition: top 0s linear;
+}
+
+#card-top {
+    top: 0;
+    transition: top 0.3s linear;
 }
 
 .user-card-block tr > td {
     text-align: center;
     vertical-align: middle;
-    border: 1px solid #dee2e6;
-    font-size: 1.5em;
+    border: 1px solid #fff;
+    font-size: 20px;
     padding: 10px 0px;
 }
 
 .user-card-block td > img {
     display: block;
     margin: 0 auto;
-    width: 350px;
+    width: 250px;
     height: auto;
 }
 .user-card-block td > div span {
@@ -34,7 +41,7 @@
 
 .user-card-block tr > td.card-phrase div {
     text-align: left;
-    font-size: 17px;
+    font-size: 18px;
     margin: 0px 25px;
 }
 
