@@ -3,6 +3,7 @@ import UserData from '../data.json';
 import Table from 'react-bootstrap/Table';
 import UserList from './UserList/UserList';
 import UserCard from './UserCard/UserCard';
+import ToolBar from './ToolBar/ToolBar';
 import Search from './Search/Search';
 import './main.css';
 
@@ -70,6 +71,7 @@ class ReactChallenge extends React.Component {
 		    <div className='wrapper'>
                 <div className='main-table-block'>
                     <Search update={this.update} data={this.initialData} />
+                    <ToolBar data={state.data} update={this.update} />
                     <Table striped bordered hover className='main-table'>
                         <tbody>
                         {users}
