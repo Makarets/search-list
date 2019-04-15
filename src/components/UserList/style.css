@@ -37,3 +37,10 @@ td.user-phrase {
     max-width: 350px;
     text-align: left;
 }
+
+@media (max-width: 1366px) {
+    .main-table-block {
+        width: 800px;
+        margin-left: 5%;
+    }
+}

@@ -47,9 +47,15 @@
 
 @media (max-width: 1366px) {
     .user-card-block td > img {
-        width: 250px;
+        width: 200px;
     }
     .user-card-block tr > td {
         font-size: 1.2em;
+        padding: 5px 0px;
+    }
+    .user-card-block {
+        width: 340px;
+        right: 5%;
+        top: 178px;
     }
 }

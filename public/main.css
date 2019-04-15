@@ -38,5 +38,18 @@ header h2 {
     }
 }
 
-
-
+@media (max-width: 1366px) {
+    header > img {
+        width: 150px;
+    }
+    header h1 {
+        font-size: 34px;
+    }
+    header h2 {
+        font-size: 18px;
+    }
+    header#main-header {
+        padding: 0;
+        margin-bottom: 30px;
+    }
+}

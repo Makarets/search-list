@@ -29,7 +29,7 @@ class ToolBar extends React.Component {
     render() {
         return(
             <div>
-                <button>Sort age</button>
+                <button onClick={() => this.sort('age')}>Sort age</button>
                 <button onClick={() => this.sort('name')}>Sort name</button>
             </div>
         )
