@@ -1,0 +1,22 @@
+div button {
+    padding: 8px;
+    padding-right: 9px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+button span {
+    font-family: "Open Sans";
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.fa-sort-alpha-asc:before {
+    content: "\f15d";
+}
+
+.fa-sort-numeric-desc:before {
+    content: "\f163";
+}
+

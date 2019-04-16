@@ -1,4 +1,6 @@
 import React from 'react';
+import './style.css';
+import 'font-awesome/css/font-awesome.min.css';
 
 class ToolBar extends React.Component {
     constructor(props) {
@@ -29,8 +31,8 @@ class ToolBar extends React.Component {
     render() {
         return(
             <div>
-                <button onClick={() => this.sort('age')}>Sort age</button>
-                <button onClick={() => this.sort('name')}>Sort name</button>
+                <button onClick={() => this.sort('name')} className='fa fa-sort-alpha-asc'><span>Sort name</span></button>
+                <button onClick={() => this.sort('age')} className='fa fa-sort-numeric-desc'><span>Sort age</span></button>
             </div>
         )
     }
